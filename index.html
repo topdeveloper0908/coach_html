@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://fonts.cdnfonts.com/css/made-canvas" rel="stylesheet">
+    
+    <title>BlackStudios</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css">
+    <link rel="stylesheet" href="./assets/styles/output.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <style>
+      .loader {
+        display: none;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #FC8621;
+        margin: auto;
+        margin-top: 4rem;
+        width: 80px;
+        height: 80px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+      }
+      
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      </style>
+
+  </head>
+
+  <body class="homepage">
+    <main class="bg-black">
+      <section class="form-section" id="form-section">
+        <header class="header">
+          <div class="header-wrapper relative flex items-center justify-between" id="myHeader">
+            <div class="header-left lg:block hidden">
+              <a href="index.html">
+                <img class="lozad" data-src="./assets/imgs/logo.png" width="66" height="60" alt="logo">
+              </a>
+            </div>
+            <div class="header-left flex justify-center ml-auto">
+              <button class="lg:hidden d-block pr-1" id="menuToggle"><i class="fa fa-bars text-white text-2xl leading-6"></i><i class="fa fa-close text-white text-2xl leading-6"></i></button>
+              <ul class="header-menu flex font-monts font-bold text-white" id="header-menu">
+                <li><a id="moveTrans" href="#">Transformations</a></li>
+                <li><a id="moveJourney" href="#">My Journey</a></li>
+                <li><a href="#">Client Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>     
+        <div class="container">
+          <div class="grid grid-flex-row md:grid-cols-2 gap-0 relative  pt-8">
+            <div class="image-wrapper">
+              <figure data-aos="zoom-in" data-aos-duration="3000">
+                <img class="shadow-image lozad" data-src="./assets/imgs/coach-ella-1-1.jpg" width="550" height="687.5" alt="banner">
+              </figure>
+            </div>
+            <div class="option-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+              <figure class="aos-init aos-animate">
+                <img class="lozad" src="./assets/imgs/Asset-5.png" width="510" height="64" alt="banner">
+              </figure>
+              <h2 class="text-white font-light text-25 text-center pt-6" data-aos="fade-up" data-aos-duration="1000">Online Coaching</h2>
+              <div class="progress-container">
+                <div id="myBar" class="bar-container" style="height:24px;width:15%"></div>
+              </div>
+              <form class="text-center" id="regForm" action="/action_page.php">
+                <!-- One "tab" for each step in the form: -->
+                <div class="tab">
+                  <h6 class="text-white font-bold font-monts uppercase mb-8 text-base">What is your fitness goal?</h6>
+                  <label class="form-control mb-4">
+                    <input type="radio" value="0" name="purpose" />
+                    Weight
+                  </label>
+                  <label class="form-control mb-4">
+                    <input type="radio" value="1" name="purpose" />
+                    Build
+                  </label>
+                  <label class="form-control mb-8">
+                    <input type="radio" value="2" name="purpose" />
+                    Healthy
+                  </label>
+                </div>
+                <div class="tab">
+                  <h6 class="text-white font-bold font-monts uppercase mb-8 text-base">IAM</h6>
+                  <div class="grid grid-flow-row grid-cols-2">
+                    <label class="form-control mb-4 mx-2">
+                      <input type="radio" value="0" name="sex" />
+                      Female
+                    </label>
+                    <label class="form-control mb-4 mx-2">
+                      <input type="radio" value="1" name="sex" />
+                      Male
+                    </label>
+                  </div>
+                </div>
+                <div class="tab">
+                  <h6 class="text-white font-bold font-monts uppercase mb-8 text-base">IAM</h6>
+                  <div class="grid grid-flow-row flex-wrap grid-cols-2">
+                    <label class="form-control mb-4 mx-2">
+                      <input type="radio" value="0" name="age" />
+                      18 TO 24
+                    </label>
+                    <label class="form-control mb-4 mx-2">
+                      <input type="radio" value="1" name="age" />
+                      24 TO 29
+                    </label>
+                    <label class="form-control mb-4 mx-2">
+                      <input type="radio" value="2" name="age" />
+                      30 TO 39
+                    </label>
+                    <label class="form-control mb-4 mx-2">
+                      <input type="radio" value="3" name="age" />
+                      Over 40
+                    </label>
+                  </div>
+                </div>
+                <div class="tab">
+                  <h6 class="text-white font-bold font-monts uppercase mb-8 text-base">What is holding you back from achieving your goals?</h6>
+                  <textarea type="text" class="form-textarea" name="goal" placeholder="Write here..."></textarea>
+                </div>
+                <div class="tab">
+                  <h6 class="text-white font-bold font-monts uppercase mb-8 text-base">What is your motivation to start now? </h6>
+                  <textarea type="text" class="form-textarea" name="motivation" placeholder="Write here..."></textarea>
+                </div>
+                <div class="tab">
+                  <h6 class="text-white font-bold font-monts uppercase mb-8 text-base">Why are you interested in having me as your coach?</h6>
+                  <textarea type="text" class="form-textarea" name="interest" placeholder="Write here..."></textarea>
+                </div>
+                <div class="tab">
+                  <h6 class="text-white uppercase font-monts mb-8 text-base">Are you willing to invest in yourself financially for a minimum of 4 months to receive the support you need to achieve your goals?</h6>
+                  <div class="grid grid-flow-row grid-cols-2">
+                    <label class="form-control checked mb-6 mx-3">
+                      <input type="radio" name="invest" value="0" checked/>
+                      YES
+                    </label>
+                    <label class="form-control mb-6 mx-3">
+                      <input type="radio" name="invest" value="1"/>
+                      NO
+                    </label>
+                  </div>
+                </div>
+                <div class="tab">
+                  <h6 class="text-white font-bold font-monts uppercase mb-8 text-base">My assistant will reach out to you via WhatsApp, please ensure you have this downloaded and leave your number below</h6>
+                  <textarea type="text" class="form-textarea" name="interest" placeholder="Write here..."></textarea>
+                </div>
+                <div class="tab contact-tab">
+                  <h6 class="text-white font-bold font-monts uppercase mb-8 text-base">Contact information</h6>
+                  <input class="mb-3 form-input" type="text" name="name" placeholder="Your full name">
+                  <input class="mb-3 form-input" id="phone" type="tel" name="phone" />
+                  <input class="mb-3 form-input" type="email" name="email" placeholder="Your email">
+                  <select id="country" name="country" data-id="country-input" class="form-select mb-12"><option value="unselect">Pick country...</option><option value="AF">Afghanistan</option><option value="AX">Åland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BQ">Bonaire, Sint Eustatius and Saba</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei Darussalam</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="CD">Congo, the Democratic Republic of the</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="CI">Cote D'Ivoire</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CW">Curaçao</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="SZ">Eswatini</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands (Malvinas)</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard Island and McDonald Islands</option><option value="VA">Holy See (Vatican City State)</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran, Islamic Republic of</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="XK">Kosovo</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Lao People's Democratic Republic</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia, Federated States of</option><option value="MD">Moldova, Republic of</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MK">North Macedonia, Republic of</option><option value="MP">Northern Mariana Islands</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russian Federation</option><option value="RW">Rwanda</option><option value="BL">Saint Barthélemy</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="MF">Saint Martin (French part)</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SX">Sint Maarten (Dutch part)</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia and the South Sandwich Islands</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="PS">State of Palestine</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syrian Arab Republic</option><option value="TW">Taiwan, Province of China</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania, United Republic of</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="GB">United Kingdom</option><option value="UM">United States Minor Outlying Islands</option><option value="US">United States of America</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VE">Venezuela</option><option value="VN">Vietnam</option><option value="VG">Virgin Islands, British</option><option value="VI">Virgin Islands, U.S.</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select>
+                </div>
+                <div class="tab">
+                  <div class="success-tab bg-white py-4 px-2 mb-8">
+                    <i aria-hidden="true" class="text-2xl fas fa-circle-check"></i>				
+                    <div>
+                      <h3 class="font-bold my-2">Thank you so much for enquiring about my coaching</h3>
+                      <p>My assistant Anis will be contact. Plz make sure you have WhatsApp downloaded</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-5">
+                  <div class="loader" id="loader"></div>
+                  <button class="prevBtn m-2" type="button" id="prevBtn" onclick="nextPrev(-1)">← Back</button>
+                  <button class="nextBtn m-2" type="button" id="nextBtn" onclick="nextPrev(1)" disabled>Next →</button>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="offer-section">
+        <div class="container">
+          <div class="grid grid-flex-row md:grid-cols-2 justify-center">
+            <div class="flex items-center">
+              <div>
+                <h2 class="heading-title mb-4" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">What do I Offer</h2>
+                <ul>
+                  <li class="flex mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                    <span class="mr-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="384pt" viewBox="0 0 384 384" width="384pt"><path d="m192 384c105.863281 0 192-86.128906 192-192 0-18.273438-2.550781-36.28125-7.601562-53.527344-2.488282-8.480468-11.34375-13.351562-19.847657-10.863281-8.488281 2.480469-13.34375 11.367187-10.863281 19.847656 4.183594 14.328125 6.3125 29.320313 6.3125 44.542969 0 88.222656-71.777344 160-160 160s-160-71.777344-160-160 71.777344-160 160-160c32.0625 0 62.910156 9.375 89.207031 27.105469 7.320313 4.941406 17.273438 3 22.207031-4.320313 4.9375-7.328125 3.011719-17.273437-4.316406-22.210937-31.601562-21.308594-68.632812-32.574219-107.097656-32.574219-105.863281 0-192 86.128906-192 192s86.136719 192 192 192zm0 0"></path><path d="m356.6875 36.6875-164.6875 164.679688-52.6875-52.679688c-6.25-6.246094-16.375-6.246094-22.625 0-6.246094 6.25-6.246094 16.375 0 22.625l64 64c3.128906 3.128906 7.214844 4.6875 11.3125 4.6875s8.183594-1.558594 11.3125-4.6875l176-176c6.246094-6.25 6.246094-16.375 0-22.625-6.25-6.246094-16.375-6.246094-22.625 0zm0 0"></path></svg>				
+                    </span>
+                    <h3 class="text-white text-base font-extralight font-monts mb-5 leading-tight">
+                      <span>sustainable and enjoyable meal <br>and training programs</span>
+                    </h3>
+                  </li>
+                  <li class="flex mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <span class="mr-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="384pt" viewBox="0 0 384 384" width="384pt"><path d="m192 384c105.863281 0 192-86.128906 192-192 0-18.273438-2.550781-36.28125-7.601562-53.527344-2.488282-8.480468-11.34375-13.351562-19.847657-10.863281-8.488281 2.480469-13.34375 11.367187-10.863281 19.847656 4.183594 14.328125 6.3125 29.320313 6.3125 44.542969 0 88.222656-71.777344 160-160 160s-160-71.777344-160-160 71.777344-160 160-160c32.0625 0 62.910156 9.375 89.207031 27.105469 7.320313 4.941406 17.273438 3 22.207031-4.320313 4.9375-7.328125 3.011719-17.273437-4.316406-22.210937-31.601562-21.308594-68.632812-32.574219-107.097656-32.574219-105.863281 0-192 86.128906-192 192s86.136719 192 192 192zm0 0"></path><path d="m356.6875 36.6875-164.6875 164.679688-52.6875-52.679688c-6.25-6.246094-16.375-6.246094-22.625 0-6.246094 6.25-6.246094 16.375 0 22.625l64 64c3.128906 3.128906 7.214844 4.6875 11.3125 4.6875s8.183594-1.558594 11.3125-4.6875l176-176c6.246094-6.25 6.246094-16.375 0-22.625-6.25-6.246094-16.375-6.246094-22.625 0zm0 0"></path></svg>				
+                    </span>
+                    <h3 class="text-white text-base font-extralight font-monts mb-5 leading-tight">
+                      <span>helping as many females as possible <br>achieve their dream bodies</span>
+                    </h3>
+                  </li>
+                  <li class="flex mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">
+                    <span class="mr-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="384pt" viewBox="0 0 384 384" width="384pt"><path d="m192 384c105.863281 0 192-86.128906 192-192 0-18.273438-2.550781-36.28125-7.601562-53.527344-2.488282-8.480468-11.34375-13.351562-19.847657-10.863281-8.488281 2.480469-13.34375 11.367187-10.863281 19.847656 4.183594 14.328125 6.3125 29.320313 6.3125 44.542969 0 88.222656-71.777344 160-160 160s-160-71.777344-160-160 71.777344-160 160-160c32.0625 0 62.910156 9.375 89.207031 27.105469 7.320313 4.941406 17.273438 3 22.207031-4.320313 4.9375-7.328125 3.011719-17.273437-4.316406-22.210937-31.601562-21.308594-68.632812-32.574219-107.097656-32.574219-105.863281 0-192 86.128906-192 192s86.136719 192 192 192zm0 0"></path><path d="m356.6875 36.6875-164.6875 164.679688-52.6875-52.679688c-6.25-6.246094-16.375-6.246094-22.625 0-6.246094 6.25-6.246094 16.375 0 22.625l64 64c3.128906 3.128906 7.214844 4.6875 11.3125 4.6875s8.183594-1.558594 11.3125-4.6875l176-176c6.246094-6.25 6.246094-16.375 0-22.625-6.25-6.246094-16.375-6.246094-22.625 0zm0 0"></path></svg>				
+                    </span>
+                    <h3 class="text-white text-base font-extralight font-monts mb-5 leading-tight">
+                      <span>extensive experience across many <br> different sports disciplines</span>
+                    </h3>
+                  </li>
+                </ul>
+                <a class="block my-12" href="#top" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                  <button class="btn btn-3 toTop">GET STARTED</button>
+                </a>
+              </div>
+            </div> 
+            <figure data-aos="zoom-in" data-aos-duration="3000">
+              <img class="shadow-image lozad" data-src="./assets/imgs/coach-ella-3-1.jpg" width="550" height="771" alt="banner">
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="online-section">
+        <div class="container" data-aos="fade-left">
+          <h2 class="heading-title text-center">Online Coaching</h2>
+          <div class="grid grid-flex-row md:grid-cols-3">
+            <div>
+              <div class="spacer mb-5 md:block hidden"></div>
+              <div class="mt-12 mb-5">
+                <div class="text-divider after-divider py-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                  <span class="divider-text mr-3">Personalised Nutrition Plans</span>
+                </div>
+              </div>
+              <p class="mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Your meal plan is a perfect combination of your personal calories and macros, which are also aligned to your goals.</p>
+              <div class="spacer-inner mb-5 md:block hidden"></div>
+              <div class="mt-12 mb-5">
+                <div class="text-divider after-divider py-4"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                  <span class="divider-text mr-3">Tailored Workout Programs</span>
+                </div>
+              </div>
+              <p class="mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Your workout plan is designed specifically for you, your goals and your lifestyle, using tried and tested training principles that I know work.</p>
+            </div>
+            <div class="phone-container z-10 md:static">
+              <div class="md:sticky top-20">
+                <div class="phone">
+                    <video autoplay="" playsinline="" muted="" loop="">
+                        <source type="video/mp4" src="https://coach-ella.co.uk/wp-content/uploads/2021/04/Coach-Ella-English-App-Overview.mp4">
+                          Your browser does not support the video tag.
+                    </video>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="spacer-inner mb-5 md:block hidden"></div>
+              <div class="mt-12 mb-5">
+                <div class="text-divider before-divider py-4"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                  <span class="divider-text ml-3">Weekly 1-1 check-ins</span>
+                </div>
+              </div>
+              <p class="mb-5"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Communication is crucial when it comes to online coaching, therefore I want to make sure you can reach out to me 24/7.</p>
+              <div class="spacer-inner mb-5 md:block hidden"></div>
+              <div class="mt-12">
+                <div class="text-divider before-divider py-4"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                  <span class="divider-text ml-3">Tailored Workout Programs</span>
+                </div>
+              </div>
+              <p class="mb-5"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Your workout plan is designed specifically for you, your goals and your lifestyle, using tried and tested training principles that I know work.</p>
+            </div>
+          </div>
+          <div class="btn-container-center mt-12 mb-8 text-center"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+            <a href="#top">
+                <button class="btn btn-3 toTop">START NOW</button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="package-section">
+        <div class="section-wrapper" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <h2 class="heading-title">ONLINE  COACHING PACKAGES</h2>
+        </div>
+      </section>
+      <seciton class="membership-section block">
+        <div class="grid grid-flex-row md:grid-cols-2">
+          <div class="premium-section" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="150">
+            <h2 class="heading-title size-default mb-5">Premium</h2>
+            <div class="text-white flex items-start mb-5">
+              <span class="icon-wrapper mr-4">
+                <i aria-hidden="true" class="fas fa-leaf"></i>				
+              </span>
+              <span class="icon-text">Nutrition Plan</span>
+            </div>
+            <div class="text-white flex items-start mb-5">
+              <span class="icon-wrapper mr-4">
+                <i aria-hidden="true" class="fas fa-dumbbell"></i>
+              </span>
+              <span class="icon-text">Training Program</span>
+            </div>
+            <div class="text-white flex items-start mb-5">
+              <span class="icon-wrapper mr-4">
+                <i aria-hidden="true" class="fas fa-calendar-check"></i>
+              </span>
+              <div>
+                <span class="icon-text block">Weekly check ins </span>
+                <p class="text-black">Including food adjustments and changes to the workout where necessary</p>
+              </div>
+            </div>
+            <div class="text-white flex items-start mb-5">
+              <span class="icon-wrapper mr-4">
+                <i aria-hidden="true" class="fas fa-comments"></i>
+              </span>
+              <span class="icon-text">1-1 communication</span>
+            </div>
+            <div class="text-white flex items-start mb-5">
+              <span class="icon-wrapper mr-4">
+                <i aria-hidden="true" class="fab fa-whatsapp"></i>
+              </span>
+              <span class="icon-text">Guidance & support through whatsapp</span>
+            </div>
+            <div class="text-white flex items-start mb-5">
+              <span class="icon-wrapper mr-4">
+                <i aria-hidden="true" class="fas fa-pills"></i>
+              </span>
+              <span class="icon-text">Supplement advice</span>
+            </div>
+            <div class="text-white flex items-start mb-10">
+              <span class="icon-wrapper mr-4">
+                <i aria-hidden="true" class="fas fa-photo-video"></i>
+              </span>
+              <span class="icon-text">Video form & Technique review</span>
+            </div>
+            <div class="text-center">
+              <a class="btn btn-3 toTop" href="#top">
+                  Sign up
+                </a>
+            </div>
+          </div>
+          <div class="basic-section flex items-center" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="300">
+            <div>
+              <h2 class="heading-title size-default mb-5">Basic</h2>
+              <div class="flex items-start mb-5">
+                <span class="icon-wrapper mr-4">
+                  <i aria-hidden="true" class="fas fa-leaf"></i>				
+                </span>
+                <span class="icon-text">Nutrition Plan</span>
+              </div>
+              <div class="flex items-start mb-5">
+                <span class="icon-wrapper mr-4">
+                  <i aria-hidden="true" class="fas fa-dumbbell"></i>
+                </span>
+                <span class="icon-text">Training Program</span>
+              </div>
+              <div class="flex items-start mb-5">
+                <span class="icon-wrapper mr-4">
+                  <i aria-hidden="true" class="fas fa-calendar-check"></i>
+                </span>
+                <div>
+                  <span class="icon-text block">Weekly check ins </span>
+                  <p class="text-black">Including food adjustments and changes to the workout where necessary</p>
+                </div>
+              </div>
+              <div class="flex items-start mb-5">
+                <span class="icon-wrapper mr-4">
+                  <i aria-hidden="true" class="fas fa-spinner"></i>
+                </span>
+                <span class="icon-text">Monthly Update to plan</span>
+              </div>
+              <div class="text-center">
+                <a class="btn btn-3 inline-block toTop" href="#top">
+                    Sign up
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </seciton>
+      <section class="guidence-section">
+        <h2 class="heading-title text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">Guidance &nbsp;Education &nbsp;Support</h2>
+        <div class="container">
+          <div id="trans" class="md:grid grid-flex-row flex-wrap md:grid-cols-2 items-center justify-center">
+            <div>
+              <div class="swiper swiper1">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img class="quote-img lozad" src="./assets/imgs/slider.jpeg" alt="sample" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="quote-img lozad" src="./assets/imgs/slider.jpeg" alt="sample" />
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev xl:block hidden"></div>
+                <div class="swiper-button-next xl:block hidden"></div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="md:px-0 px-4 md:pt-0 pt-8">
+                <h2 class="heading-title mb-5 leading-tight" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150"> Client Transformations &amp; Success Stories</h2>
+                <p class="mb-12 text-white text-base font-monts font-light tracking-0.5 leading-tighter"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">I am an approachable coach that will help educate and motivate clients to achieve their goals. Sustainable, suitable, and personalised meal/training programs catering to their lifestyle and goals. Interacting with clients via messaging, voice notes, and video calls (when required). I help clients achieve the body they’ve always dreamed of, increase body and self-confidence, experience personal growth during their fitness journey, increased energy, and achieve a happier life.</p>
+                <div class="btn-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">
+                  <a href="#top">
+                      <button class="btn btn-3 toTop">GET STARTED</button>
+                      </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonal-section">
+        <div class="swiper swiper2 swiper-nav-out">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="container">
+                <div class="custom-swiper">
+                  <div>
+                    <div style="display: flex;"> 
+                      <span class="quote-img"><img decoding="async" src="https://coach-ella.co.uk/wp-content/uploads/2021/04/Group-30.svg" data-xblocker="passed" style="visibility: visible;"></span>
+                      <span class="top-bar"></span>
+                    </div>	
+                  </div>
+                  <div class="border-right-special">
+                    <div class="testimonal-content">
+                      <p class="text">Thank you so much!! I really have learnt a lot about my body for sure, it’s been a good journey so far and although up and down it’s defo been better than what it was before we started this and I can’t thank you enough for helping me!</p>
+                      <p class="name"><strong>– Teal</strong></p>					
+                    </div>
+                  </div>
+                  <div style="display: flex;"> 
+                    <span class="top-bar"></span>
+                    <span class="quote-img bottom-quote"><img decoding="async" src="https://coach-ella.co.uk/wp-content/uploads/2021/04/Group-32.svg" data-xblocker="passed" style="visibility: visible;"></span>
+                  </div>
+                </div>                
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container">
+                <div class="custom-swiper">
+                  <div>
+                    <div style="display: flex;"> 
+                      <span class="quote-img"><img decoding="async" src="https://coach-ella.co.uk/wp-content/uploads/2021/04/Group-30.svg" data-xblocker="passed" style="visibility: visible;"></span>
+                      <span class="top-bar"></span>
+                    </div>	
+                  </div>
+                  <div class="border-right-special">
+                    <div class="testimonal-content">
+                      <p class="text">I have been feeling AMAZING this week! Super focussed on my food plan and LOVED the food again. Really focussed in my workouts and challenged myself to go further….reaching 181bpm! Really feeling motivated to keep going now and making the most out of the last few weeks.</p>
+                      <p class="name"><strong>– Hannah A.</strong></p>					
+                    </div>
+                  </div>
+                  <div style="display: flex;"> 
+                    <span class="top-bar"></span>
+                    <span class="quote-img bottom-quote"><img decoding="async" src="https://coach-ella.co.uk/wp-content/uploads/2021/04/Group-32.svg" data-xblocker="passed" style="visibility: visible;"></span>
+                  </div>
+                </div>                
+              </div>
+            </div>
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <secion class="journey-section block">
+        <div class="container">
+          <div id="journey" class="grid grid-flex-row md:grid-cols-2  items-center mb-10">
+            <figure data-aos="zoom-in" data-aos-duration="2000">
+              <img class="shadow-image lozad mx-auto" data-src="./assets/imgs/coach-ella-2-1.jpg" width="468" height="585" alt="banner">
+            </figure>
+            <div class="text-white">
+              <h2 class="heading-title mb-5 md:mt-0 mt-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">My journey</h2>
+              <p class="mb-5 font-monts tracking-0.5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">My background in sport and fitness began when I was 5 years old and my parents introduced me to <strong>gymnastics</strong>. I competed for my county, region and country on several occasions for 8 years.</p>
+              <p class="mb-5 font-monts tracking-0.5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">At 13, I decided to give it up but continued my love for sports through <strong>coaching</strong>. I naturally progressed to diving where I competed for 6 years.</p>
+              <p class="mb-5 font-monts tracking-0.5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">When I reached 18, I undertook a <strong>sport and exercise science degree</strong> at the university of Birmingham graduating with a 2:1. At uni, I competed for the cheerleading team and in my final year coached the squad.</p>
+            </div>
+          </div>
+          <div class="grid grid-flex-row md:grid-cols-2 items-center relative">
+            <div class="text-white md:mt-0 mt-12">
+              <p class="mb-5 font-monts tracking-0.5" data-aos="fade-up" data-aos-duration="1000">Upon leaving, I wanted to be a <strong>stunt woman</strong>, but whilst training I sustained a life changing injury preventing me from any high impact sports and leaving me with arthritis. So I switched to <strong>fitness</strong>, and over the past 4 years I have transformed my body and my life.</p>
+              <p class="mb-5 font-monts tracking-0.5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">In lockdown 1 I got my <strong>PT qualification</strong> so that I could officially start training people. After seeing my own transformation and the impact it had on my life, I knew I wanted to help others do the same. My goal is to help as many females as possible either begin, or progress on their fitness journey, so they can make healthier choices, increase their <strong>confidence</strong> and live a <strong>happier life</strong>.</p>
+              <div class="brand-wrapper md:block hidden">
+                <img width="165" height="150" src="./assets/imgs/brand.png" class="attachment-large size-large" alt="brand">														
+              </div>
+            </div>
+            <figure class="md:-order-none -order-10" data-aos="zoom-in" data-aos-duration="1000">
+              <img class="shadow-image lozad mx-auto" data-src="./assets/imgs/coach-ella-2-1.jpg" width="550" height="550" alt="banner">
+            </figure>
+          </div>
+        </div>
+      </secion>
+      <seciton class="follow-section text-center">
+        <div class="title-wrapper">
+          <h2 class="heading-title text-center" data-aos="fade-up" data-aos-duration="1000">Follow me</h2>
+          <div class="flex justify-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+            <a class="font-monts text-base font-bold bg-primary mx-auto" href="https://www.instagram.com/ellamaerayner/" target="_blank">@ellamaerayner</a>
+          </div>
+        </div>
+        <div class="image-gallery swiper swiper3">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="grid grid-flex-row flex-wrap xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="grid grid-flex-row flex-wrap xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="main-wrapper">
+                  <figure class="main-image">
+                    <img src="./assets/imgs/download.jpg" width="380" height="379" alt="banner">
+                  </figure>
+                  <span class="icon-svg">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23.467,5.762c-0.118-0.045-0.232-0.068-0.342-0.068c-0.246,0-0.451,0.087-0.615,0.26l-3.76,3.217v5.766l3.76,3.578c0.164,0.173,0.369,0.26,0.615,0.26c0.109,0,0.223-0.023,0.342-0.068C23.822,18.552,24,18.284,24,17.901V6.57C24,6.186,23.822,5.917,23.467,5.762z"></path>
+                        <path d="M16.33,4.412c-0.77-0.769-1.696-1.154-2.78-1.154H3.934c-1.084,0-2.01,0.385-2.78,1.154C0.385,5.182,0,6.108,0,7.192v9.616c0,1.084,0.385,2.01,1.154,2.78c0.77,0.77,1.696,1.154,2.78,1.154h9.616c1.084,0,2.01-0.385,2.78-1.154c0.77-0.77,1.154-1.696,1.154-2.78v-3.076v-3.478V7.192C17.484,6.108,17.099,5.182,16.33,4.412z M8.742,17.229c-2.888,0-5.229-2.341-5.229-5.229c0-2.888,2.341-5.229,5.229-5.229S13.971,9.112,13.971,12C13.971,14.888,11.63,17.229,8.742,17.229z"></path>
+                        <circle cx="8.742" cy="12" r="3.5"></circle>
+                    </svg>
+                  </span>
+                  <div class="item-overlay" eapps-link="overlay">
+                    <div class="item-content" eapps-link="content">
+                      <div class="item-counters">
+                        <div class="item-likes-count es-post-likes-count">
+                          <svg class="item-likes-count-icon" viewBox="0 0 24 24">
+                              <path d="M17.7,1.5c-2,0-3.3,0.5-4.9,2.1c0,0-0.4,0.4-0.7,0.7c-0.3-0.3-0.7-0.7-0.7-0.7c-1.6-1.6-3-2.1-5-2.1C2.6,1.5,0,4.6,0,8.3
+                              c0,4.2,3.4,7.1,8.6,11.5c0.9,0.8,1.9,1.6,2.9,2.5c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2c1.1-1,2.1-1.8,3.1-2.7
+                              c4.8-4.1,8.5-7.1,8.5-11.4C24,4.6,21.4,1.5,17.7,1.5z M14.6,18.6c-0.8,0.7-1.7,1.5-2.6,2.3c-0.9-0.7-1.7-1.4-2.5-2.1
+                              c-5-4.2-8.1-6.9-8.1-10.5c0-3.1,2.1-5.5,4.9-5.5c1.5,0,2.6,0.3,3.8,1.5c1,1,1.2,1.2,1.2,1.2C11.6,5.9,11.7,6,12,6.1
+                              c0.3,0,0.5-0.2,0.7-0.4c0,0,0.2-0.2,1.2-1.3c1.3-1.3,2.1-1.5,3.8-1.5c2.8,0,4.9,2.4,4.9,5.5C22.6,11.9,19.4,14.6,14.6,18.6z"></path>
+                          </svg>
+                          <div class="item-likes-count-label">3.3K</div>
+                        </div>
+                        <div class="item-comments-count es-post-comments-count">
+                          <svg class="item-comments-count-icon" viewBox="0 0 24 24">
+                              <path d="M1,11.9C1,17.9,5.8,23,12,23c1.9,0,3.7-1,5.3-1.8l5,1.3l0,0c0.1,0,0.1,0,0.2,0c0.4,0,0.6-0.3,0.6-0.6c0-0.1,0-0.1,0-0.2
+                              l-1.3-4.9c0.9-1.6,1.4-2.9,1.4-4.8C23,5.8,18,1,12,1C5.9,1,1,5.9,1,11.9z M2.4,11.9c0-5.2,4.3-9.5,9.5-9.5c5.3,0,9.6,4.2,9.6,9.5
+                              c0,1.7-0.5,3-1.3,4.4l0,0c-0.1,0.1-0.1,0.2-0.1,0.3c0,0.1,0,0.1,0,0.1l0,0l1.1,4.1l-4.1-1.1l0,0c-0.1,0-0.1,0-0.2,0
+                              c-0.1,0-0.2,0-0.3,0.1l0,0c-1.4,0.8-3.1,1.8-4.8,1.8C6.7,21.6,2.4,17.2,2.4,11.9z"></path>
+                          </svg>
+                          <div class="item-comments-count-label">26</div>
+                        </div>
+                      </div>
+                      <div class="item-text es-post-text" eapps-link="text">A MURDEROUS leg day <img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f525.svg"><img draggable="false" role="img" class="emoji" alt="🥵" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f975.svg"> Ensure you are working until almost failure at the end of each set <img draggable="false" role="img" class="emoji" alt="😮‍💨" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62e-200d-1f4a8.svg">Watch and save reel for full workout and let’s get strong together <img draggable="false" role="img" class="emoji" alt="💪🏽" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f4aa-1f3fd.svg"></div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        
+      </seciton>
+      <section class="begin-section">
+        <h2 class="heading-title mb-5 text-center" data-aos="fade-up" data-aos-duration="1000">Let the journey begin!</h2>
+        <div class="flex justify-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+          <button class="btn btn-3 toTop">SIGN UP</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer bg-primary text-white px-4 pt-5" id="footer">
+      <div class="container">
+        <div class="flex items-center justify-between pb-5">
+          <figure>
+            <img class="lozad" data-src="./assets/imgs/footer-logo.png" width="82" height="75" alt="logo">
+          </figure>
+          <div>
+            <div class="icon-wrapper mb-5">
+              <a class="insta-link" href="https://www.instagram.com/ellamaerayner/" target="_blank">
+                <svg class="ml-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>			
+              </a>
+            </div>
+            <div class="flex privacy-wrapper">
+              <a class="mr-4" href="https://lenus.io/coach-ella/legal-terms?locale=en-GB" target="_blank" rel="noopener"> Terms and Conditions</a>
+              <a href="https://lenus.io/coach-ella/data-policy?locale=en-GB" target="_blank" rel="noopener">Privacy Policy</a>					
+            </div>
+          </div>
+        </div>
+        <div class="flex pb-5">
+            <span class="text-white text-center hover:bg-primary mx-auto">@ 2023 Coach Ella | All rights reserved | Powered by <a  href="https://qasimmedia.com" class="bg-primary">Qasim Media</a></span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+      const swiper1 = new Swiper('.swiper1', {
+        // Optional parameters
+        loop: false,
+        spaceBetween: 60,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      });      
+      const swiper2 = new Swiper('.swiper2', {
+        // Optional parameters
+        loop: false,
+        spaceBetween: 60,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });      
+      const swiper3 = new Swiper('.swiper3', {
+        // Optional parameters
+        loop: true,
+        spaceBetween: 0,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }
+      });
+      // Animate
+      $("#moveTrans").click(function() {
+          $([document.documentElement, document.body]).animate({
+              scrollTop: $("#trans").offset().top
+          }, 1000);
+      });
+      $("#moveJourney").click(function() {
+          $([document.documentElement, document.body]).animate({
+              scrollTop: $("#journey").offset().top
+          }, 1000);
+      });
+      $(".toTop").click(function() {
+          $([document.documentElement, document.body]).animate({
+              scrollTop: $("#form-section").offset().top
+          }, 1000);
+      });
+
+      var currentTab = 0; // Current tab is set to be the first tab (0)
+      showTab(currentTab); // Display the current tab
+
+      $( ".form-control" ).on( "click", function() {
+        if($(this).hasClass('checked')) {
+          return;
+        }
+        else {
+          $( this ).siblings().removeClass('checked');
+          $( this ).addClass("checked");
+        }
+        $('.nextBtn').removeAttr('disabled');
+        setTimeout(function() { 
+          nextPrev(1)
+        }, 200);
+      });
+      function showTab(n) {
+        // This function will display the specified tab of the form...
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        //... and fix the Previous/Next buttons:
+        if (n == 0) {
+          document.getElementById("prevBtn").style.display = "none";
+        } else {
+          document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == (x.length - 1)) {
+          document.getElementById("nextBtn").innerHTML = "Contact me →";
+        } else {
+          document.getElementById("nextBtn").innerHTML = "Next →";
+        }
+        //... and run a function that will display the correct step indicator:
+        fixStepIndicator(n)
+      }
+
+      function nextPrev(n) {
+        
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+
+        var checked = 0;
+        if(n == 1 && currentTab != 8) {
+          $.each(x[currentTab].getElementsByClassName("form-control"), function(index, value){
+            if($(this).hasClass('checked')) {
+              checked++;
+            }
+          });
+          $.each(x[currentTab].getElementsByClassName("form-textarea"), function(index, value){
+            if($(this).val() != '')
+              checked++;
+          });
+          if(checked == 0)
+            return; 
+        }
+        if( currentTab == 8) {
+          $.each(x[currentTab].getElementsByClassName("form-input"), function(index, value){
+            if($(this).val() == '')
+              checked++;
+          });
+          $.each(x[currentTab].getElementsByClassName("form-select"), function(index, value){
+            if($(this).val() == 'unselect')
+              checked++;
+          });
+          if(checked > 0) 
+            return;
+        }
+
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form...
+        if (currentTab > 8) {
+          // ... the form gets submitted:
+          var str = $( "form" ).serialize();
+          document.getElementById("nextBtn").style.display = "none";
+          document.getElementById("prevBtn").style.display = "none";
+          document.getElementById("loader").style.display = "block";
+          $.ajax({
+            method: "POST",
+            url: "send.php",
+            data: str
+          })
+            .done(function( msg ) {
+              showTab(currentTab);
+              document.getElementById("nextBtn").style.display = "none";
+              document.getElementById("prevBtn").style.display = "none";
+              document.getElementById("loader").style.display = "none";
+            });
+          // document.getElementById("regForm").submit();
+          return false;
+        }
+        else {
+          showTab(currentTab);
+        }
+      }
+
+      function validateForm() {
+        // This function deals with validation of the form fields
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        // A loop that checks every input field in the current tab:
+        for (i = 0; i < y.length; i++) {
+          // If a field is empty...
+          if (y[i].value == "") {
+            // add an "invalid" class to the field:
+            y[i].className += " invalid";
+            // and set the current valid status to false
+            valid = false;
+          }
+        }
+        return valid; // return the valid status
+      }
+      function fixStepIndicator(n) {
+        if(n<9) {
+          $("#myBar").css("width", (n+1)/9*100+'%');
+        }
+        
+      }
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+      AOS.init();
+      </script>
+  </body>
+</html>
